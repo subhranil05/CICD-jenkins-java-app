@@ -5,7 +5,7 @@ pipeline{
             steps{
                 echo "========SonarQube test========"
                 agent{
-                    docker{
+                    docker {
                         image 'openjdk:11'
                     }
                 }
