@@ -3,8 +3,7 @@ pipeline{
     stages{
         stage("sonar quality check"){
             steps{
-                echo "========SonarQube test========"
-                agent{
+                agent {
                     docker {
                         image 'openjdk:11'
                     }
