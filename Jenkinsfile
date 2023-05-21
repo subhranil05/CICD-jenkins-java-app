@@ -13,7 +13,7 @@ pipeline{
                             sh 'chmod +x gradlew'
                             sh './gradlew sonar \
                                 -Dsonar.projectKey=jenkins_gradle_cicd \
-                                -Dsonar.host.url=http://localhost:9000
+                                -Dsonar.host.url=http://localhost:9000'
                     }
                 }
             }
