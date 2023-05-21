@@ -1,7 +1,7 @@
 FROM openjdk:11 as base
 WORKDIR /app
 COPY . .
-RUN ./gradlew build
+RUN chmod +x gradlew && ./gradlew build
 
 FROM tomcat:9
 WORKDIR /webapp
