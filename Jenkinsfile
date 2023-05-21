@@ -11,9 +11,7 @@ pipeline{
                 script{
                         withSonarQubeEnv(credentialsId: 'sonar-token') {
                             sh 'chmod +x gradlew'
-                            sh './gradlew sonar \
-                                -Dsonar.projectKey=jenkins_gradle_cicd \
-                                -Dsonar.host.url=http://localhost:9000'
+                            sh './gradlew sonarqube'
                     }
                 }
             }
