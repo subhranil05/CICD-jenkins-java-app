@@ -35,12 +35,12 @@ pipeline{
             steps{
                 script{
                     withCredentials([string(credentialsId: 'docker_pwd', variable: 'docker_pwd')]) {
-                        sh ```
-                        docker build -t subhranil05/simple-webapp:${VERSION} -f Dockerfile .
-                        docker login -u subhranil05 -p $docker_pwd
-                        docker push subhranil05/simple-webapp:${VERSION}
-                        docker rmi subhranil05/simple-webapp:${VERSION}
-                        ```
+                        sh '''
+                            docker build -t subhranil05/simple-webapp:${VERSION} -f Dockerfile .
+                            docker login -u subhranil05 -p $docker_pwd
+                            docker push subhranil05/simple-webapp:${VERSION}
+                            docker rmi subhranil05/simple-webapp:${VERSION}
+                        '''
                     }
                 }
             }
